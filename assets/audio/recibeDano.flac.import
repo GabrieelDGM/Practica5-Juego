@@ -1,0 +1,12 @@
+[remap]
+
+importer="flac"
+type="AudioStreamFLAC"
+uid="uid://ov26av37kqe97"
+
+[deps]
+
+source_file="res://assets/audio/recibeDano.flac"
+dest_files=[]
+
+[params]

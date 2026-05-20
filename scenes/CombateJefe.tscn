@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://combate00001"]
+
+[ext_resource type="Script" path="res://scripts/CombateJefe.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mapa_completo.png" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Agente.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Jefe.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/MenuPausa.tscn" id="6"]
+
+[sub_resource type="RectangleShape2D" id="muro_h"]
+size = Vector2(640, 24)
+
+[sub_resource type="RectangleShape2D" id="muro_v"]
+size = Vector2(24, 448)
+
+[sub_resource type="RectangleShape2D" id="col"]
+size = Vector2(22, 32)
+
+[node name="CombateJefe" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+centered = false
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="MuroArriba" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(320, 12)
+shape = SubResource("muro_h")
+
+[node name="MuroAbajo" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(320, 436)
+shape = SubResource("muro_h")
+
+[node name="MuroIzq" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(12, 224)
+shape = SubResource("muro_v")
+
+[node name="MuroDer" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(628, 224)
+shape = SubResource("muro_v")
+
+[node name="Col1" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(112, 112)
+shape = SubResource("col")
+
+[node name="Col2" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(368, 112)
+shape = SubResource("col")
+
+[node name="Col3" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(112, 208)
+shape = SubResource("col")
+
+[node name="Col4" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(368, 208)
+shape = SubResource("col")
+
+[node name="Col5" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(112, 304)
+shape = SubResource("col")
+
+[node name="Col6" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(368, 304)
+shape = SubResource("col")
+
+[node name="Col7" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(48, 112)
+shape = SubResource("col")
+
+[node name="Col8" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(48, 304)
+shape = SubResource("col")
+
+[node name="Col9" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(592, 112)
+shape = SubResource("col")
+
+[node name="Col10" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(592, 304)
+shape = SubResource("col")
+
+[node name="Agente" parent="." instance=ExtResource("3")]
+position = Vector2(320, 380)
+
+[node name="Jefe" parent="." instance=ExtResource("4")]
+position = Vector2(320, 110)
+
+[node name="HUD" parent="." instance=ExtResource("5")]
+
+[node name="MenuPausa" parent="." instance=ExtResource("6")]
