@@ -27,7 +27,7 @@ El objetivo es vencer a Jefe malo esquivando sus ataques y consiguiendo la mayor
 
 -  Movimiento en 8 direcciones y disparo direccional
 -  Dash con invulnerabilidad breve para esquivar proyectiles
--  Sistema de vida con barras HP para Donald y Nicolas
+-  Sistema de vida con barras HP para Agente y Jefe Final
 -  Sistema de puntos con bonus por rapidez
 - Jefe con dos fases de comportamiento (la fase 2 se activa al 40% de vida)
 - Menú de pausa funcional
@@ -51,8 +51,8 @@ El objetivo es vencer a Jefe malo esquivando sus ataques y consiguiendo la mayor
 | `MenuPrincipal` | Pantalla de inicio con botones Jugar y Salir |
 | `Nivel1` | Pasillo de entrada hasta la sala del jefe |
 | `CombateJefe` | Sala del enfrentamiento final |
-| `Agente` (Donald) | Movimiento, disparo, dash, vida y animaciones |
-| `Jefe` (Nicolas) | IA con dos fases de ataque |
+| `Agente` (Agente) | Movimiento, disparo, dash, vida y animaciones |
+| `Jefe` (Jefe Malo) | IA con dos fases de ataque |
 | `Bala` | Proyectil con detección de colisiones por capas |
 | `Puerta` | Detecta a Donald y carga el combate |
 | `HUD` | Barras de vida y contador de puntos |
@@ -67,8 +67,8 @@ El objetivo es vencer a Jefe malo esquivando sus ataques y consiguiendo la mayor
 
 | Acción | Puntos |
 |---|---|
-| Impactar a Nicolas | +50 |
-| Derrotar a Nicolas | +1000 |
+| Impactar a Jefe Final | +50 |
+| Derrotar a Jefe Final | +1000 |
 | Bonus de tiempo | Hasta +2000 (−10 por segundo) |
 
 La **puntuación final** es la suma de puntos acumulados más el bonus de tiempo.
